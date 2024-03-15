@@ -1,0 +1,22 @@
+name: Example Workflow
+
+# 定义触发条件
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # 定义运行环境
+
+    steps:
+      - uses: actions/checkout@v2 # 检出代码
+
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other commands you want to run here
+          echo This is another command
